@@ -1,0 +1,32 @@
+version: '3.2'
+services:
+  ied_1:
+    build: docker/iec61850_base
+    networks:
+      - iec61850_network
+    tty: true
+    mac_address: 02:42:ac:12:00:01
+
+  ied_2:
+    build: docker/iec61850_base
+    networks:
+      - iec61850_network
+    tty: true
+    mac_address: 02:42:ac:12:00:02
+
+  ied_3:
+    build: docker/iec61850_base
+    networks:
+      - iec61850_network
+    tty: true
+    mac_address: 02:42:ac:12:00:03
+
+  ied_4:
+    build: docker/iec61850_base
+    networks:
+      - iec61850_network
+    tty: true
+    mac_address: 02:42:ac:12:00:04
+
+networks:
+  iec61850_network:
