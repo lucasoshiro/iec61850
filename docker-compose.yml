@@ -6,6 +6,8 @@ services:
       - iec61850_network
     tty: true
     mac_address: 02:42:ac:12:00:01
+    volumes:
+      - "./goose:/goose"
 
   ied_2:
     build: docker/iec61850_base
@@ -13,6 +15,8 @@ services:
       - iec61850_network
     tty: true
     mac_address: 02:42:ac:12:00:02
+    volumes:
+      - "./goose:/goose"
 
   ied_3:
     build: docker/iec61850_base
@@ -20,6 +24,8 @@ services:
       - iec61850_network
     tty: true
     mac_address: 02:42:ac:12:00:03
+    volumes:
+      - "./goose:/goose"
 
   ied_4:
     build: docker/iec61850_base
@@ -27,6 +33,8 @@ services:
       - iec61850_network
     tty: true
     mac_address: 02:42:ac:12:00:04
+    volumes:
+      - "./goose:/goose"
 
 networks:
   iec61850_network:
